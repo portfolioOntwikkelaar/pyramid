@@ -20,16 +20,16 @@ body {
 }
 
 .experience {
-    position: fixed; 
+    position: fixed; /* Zorgt ervoor dat de hele "scene" vaststaat */
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
+    overflow: hidden; /* Houdt de bergen binnen de viewport */
     top: 0;
     left: 0;
-    
+    /* De scroll-animatie zal de bergen hierbinnen bewegen */
 }
 
 .mountain-range {
@@ -70,7 +70,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    
+    /* Extra: Zorgt ervoor dat de mist/sterren zich bovenaan de viewport bevinden */
     top: 0; 
     left: 0;
 }
