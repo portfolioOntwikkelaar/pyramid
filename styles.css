@@ -1,0 +1,86 @@
+:root {
+  --color-sky-start: #c9d6ff;
+  --color-sky-end: #e2e2e2;
+  --color-mountain-start: rgba(189, 193, 199, 0.9);
+  --color-mountain-end: rgba(199, 189, 198, 0.1);
+  --transition-base: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--color-sky-start), var(--color-sky-end));
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.experience {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mountain-range {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: -10px;
+}
+
+.mountain {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0 0.7775em 2em;
+  transform-origin: center bottom;
+  will-change: transform;
+}
+
+.mountain:nth-child(1) { font-size: 1em; border-bottom-color: var(--color-mountain-start); }
+.mountain:nth-child(2) { font-size: 2em; border-bottom-color: color-mix(in srgb, var(--color-mountain-start), transparent 10%); }
+.mountain:nth-child(3) { font-size: 3em; border-bottom-color: color-mix(in srgb, var(--color-mountain-start), transparent 20%); }
+.mountain:nth-child(4) { font-size: 4em; border-bottom-color: color-mix(in srgb, var(--color-mountain-start), transparent 30%); }
+.mountain:nth-child(5) { font-size: 5em; border-bottom-color: color-mix(in srgb, var(--color-mountain-start), transparent 40%); }
+.mountain:nth-child(6) { font-size: 6em; border-bottom-color: color-mix(in srgb, var(--color-mountain-start), transparent 50%); }
+.mountain:nth-child(7) { font-size: 7em; border-bottom-color: color-mix(in srgb, var(--color-mountain-start), transparent 60%); }
+.mountain:nth-child(8) { font-size: 8em; border-bottom-color: color-mix(in srgb, var(--color-mountain-start), transparent 70%); }
+.mountain:nth-child(9) { font-size: 9em; border-bottom-color: color-mix(in srgb, var(--color-mountain-start), transparent 80%); }
+.mountain:nth-child(10) { font-size: 10em; border-bottom-color: var(--color-mountain-end); }
+
+.atmosphere {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mist {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
+  opacity: 0.3;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(2px 2px at 20% 15%, white, transparent), radial-gradient(1px 1px at 80% 25%, white, transparent), radial-gradient(1px 1px at 50% 70%, white, transparent);
+  opacity: 0.7;
+}
